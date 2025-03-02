@@ -1,25 +1,31 @@
 export function createToast(type, title, message) {
     const alertStyles = {
+        generic: {
+            class: '',
+            icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 18.25A6.25 6.25 0 1118.25 12 6.25 6.25 0 0112 18.25z" />
+            </svg>`
+        },
         info: {
-            class: 'alert alert-info',
+            class: 'alert-info',
             icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 18.25A6.25 6.25 0 1118.25 12 6.25 6.25 0 0112 18.25z" />
             </svg>`
         },
         error: {
-            class: 'alert alert-error',
+            class: 'alert-error',
             icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>`
         },
         warning: {
-            class: 'alert alert-warning',
+            class: 'alert-warning',
             icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M6.938 16h10.124c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L4.206 13c-.77 1.333.192 3 1.732 3z" />
             </svg>`
         },
         success: {
-            class: 'alert alert-success',
+            class: 'alert-success',
             icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
             </svg>`
@@ -44,13 +50,14 @@ export function createToast(type, title, message) {
                 </div>
                 <div class="text-md mb-2">${message}</div>
                 <div class="w-full">
-                    <progress class="progress progress-primary w-full h-2 rounded-full" value="50" max="100"></progress>
+                    <progress class="progress progress-neutral w-full h-2 rounded-full" value="50" max="100"></progress>
                 </div>
             </div>
         </div>
     `;
 }
 
+export const generic = (title, message) => createToast('generic', title, message);
 export const info = (title, message) => createToast('info', title, message);
 export const error = (title, message) => createToast('error', title, message);
 export const warning = (title, message) => createToast('warning', title, message);

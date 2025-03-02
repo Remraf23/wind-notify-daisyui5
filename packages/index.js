@@ -1,4 +1,4 @@
-import { info, error, success, warning } from "./toasts/messages.js";
+import { generic, info, error, success, warning } from "./toasts/messages.js";
 
 export const startWindToast = async (title, message, alertType, duration = 10, position = 'right', zIndex = 10000) => {
     // Check if we're in a browser environment
@@ -38,8 +38,11 @@ export const startWindToast = async (title, message, alertType, duration = 10, p
         case 'success':
             toastyMessage.innerHTML = success(title, message);
             break;
-        default:
+        case 'warning':
             toastyMessage.innerHTML = warning(title, message);
+            break;
+        default:
+            toastyMessage.innerHTML = generic(title, message);
             break;
     }
     // Move the progress bar once reached the end of the toasty, remove the toasty

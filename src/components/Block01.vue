@@ -82,10 +82,21 @@
             p-10
             undefined
             " style="background-size: 5px 5px">
+                        <button class="uppercase btn" @click="
+                            startWindToast(
+                                'Generic Example!',
+                                'This is a generic example',
+                                '',
+                                displayTime,
+                                position
+                            )
+                            ">
+                            generic
+                        </button>
                         <button class="uppercase btn btn-success" @click="
                             startWindToast(
                                 'Success Example!',
-                                'This is a success',
+                                'This is a success example',
                                 'success',
                                 displayTime,
                                 position
@@ -96,7 +107,7 @@
                         <button class="uppercase btn btn-info" @click="
                             startWindToast(
                                 'Info Example!',
-                                'This is a info',
+                                'This is a info example',
                                 'info',
                                 displayTime,
                                 position
@@ -107,7 +118,7 @@
                         <button class="uppercase btn btn-error" @click="
                             startWindToast(
                                 'Error Example!',
-                                'This is a error',
+                                'This is a error example',
                                 'error',
                                 displayTime,
                                 position
