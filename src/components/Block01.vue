@@ -158,36 +158,13 @@
                     </div>
                     <div class="">
                         <div class="card-body">
-                            <h2 class="card-title">JIT - Just In Time</h2>
+                            <h2 class="card-title">Explicitly defining this package</h2>
                             <p>
-                                Notes: if using jit mode please add the
-                                "<code class="text-accent">@mariojgt/wind-notify/packages/toasts/messages.js</code>"
-                                file to the tailwind.config.js
+                                Tailwind 4 automatically purges any classes not being used - to explicitly define this package (more info <a class="underline" href="https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources">here</a>) and avoid the relevant classes from this module being purged please include the following line under your tailwind import:
                             </p>
                             <div class="mockup-code text-left">
-                                <pre data-prefix="1"
-                                    class="text-success"><code>const plugin = require('tailwindcss/plugin')</code> </pre>
-                                <pre data-prefix="2" class="text-success"><code>module.exports = {</code> </pre>
-                                <pre data-prefix="3" class="text-success"><code>    darkMode: 'class',</code> </pre>
-                                <pre data-prefix="4" class="text-success"><code>    mode: 'jit',</code> </pre>
-                                <pre data-prefix="5" class="text-success"><code>    purge: [</code> </pre>
-                                <pre data-prefix="6"
-                                    class="text-warning"><code>        // Don't purge the classes you need</code> </pre>
-                                <pre data-prefix="9"
-                                    class="text-warning"><code>        "@mariojgt/wind-notify/packages/toasts/messages.js"</code> </pre>
-                                <pre data-prefix="10" class="text-success"><code>    ],</code> </pre>
-                                <pre data-prefix="11" class="text-success"><code>    theme: {</code> </pre>
-                                <pre data-prefix="12" class="text-success"><code>    extend: {},</code> </pre>
-                                <pre data-prefix="13" class="text-success"><code>    },</code> </pre>
-                                <pre data-prefix="14" class="text-success"><code>    variants: {</code> </pre>
-                                <pre data-prefix="15" class="text-success"><code>        extend: {</code> </pre>
-                                <pre data-prefix="16" class="text-success"><code>        textOpacity: ['dark']</code> </pre>
-                                <pre data-prefix="17" class="text-success"><code>        }</code> </pre>
-                                <pre data-prefix="18" class="text-success"><code>    },</code> </pre>
-                                <pre data-prefix="19" class="text-success"><code>    plugins: [</code> </pre>
-                                <pre data-prefix="20" class="text-success"><code>        require('daisyui'),</code> </pre>
-                                <pre data-prefix="21" class="text-success"><code>    ],</code> </pre>
-                                <pre data-prefix="22" class="text-success"><code>}</code> </pre>
+                                <pre data-prefix="2" class="text-success"><code>@import 'tailwindcss';</code></pre>
+                                <pre data-prefix="1" class="text-success"><code>@source '../../node_modules/@remraf23/wind-notify-daisyui5/packages/';</code></pre>
                             </div>
                         </div>
                     </div>
