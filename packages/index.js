@@ -1,4 +1,4 @@
-import { info, error, success, warning } from "./toasts/messages";
+import { info, error, success, warning } from "./toasts/messages.js";
 
 export const startWindToast = async (title, message, alertType, duration = 10, position = 'right', zIndex = 10000) => {
     // Check if we're in a browser environment

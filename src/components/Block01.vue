@@ -45,14 +45,12 @@
             </div>
 
             <div class="p-10">
-                <h1 class="text-5xl font-bold">Usage Example</h1>
+                <h1 class="text-5xl font-bold pb-10">Usage Example</h1>
 
-                <div class="p-10">
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Position</span>
-                        </label>
-                        <select class="select select-bordered" v-model="position">
+                <div>
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Position?</legend>
+                        <select class="select select-bordered w-full" v-model="position">
                             <option disabled selected>Select the position</option>
                             <option value="top">Top</option>
                             <option value="bottom">Bottom</option>
@@ -60,12 +58,14 @@
                             <option value="left">Left</option>
                             <option value="middle">Middle</option>
                         </select>
-                        <label class="label">
-                            <span class="label-text">Notification Display Time</span>
-                            <span class="label-text-alt">Must be in seconds</span>
-                        </label>
-                        <input type="text" placeholder="Display Time" class="input" v-model="displayTime" />
-                    </div>
+                    </fieldset>
+                   
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Notification Display Time?</legend>
+                        <input type="text" placeholder="Display Time" class="input w-full" v-model="displayTime" />
+                        <p class="fieldset-label">Must be in seconds</p>
+                    </fieldset>
+
                     <div class="
                     mt-5
             preview
@@ -82,7 +82,7 @@
             p-10
             undefined
             " style="background-size: 5px 5px">
-                        <button class="btn btn-success" @click="
+                        <button class="uppercase btn btn-success" @click="
                             startWindToast(
                                 'Success Example!',
                                 'This is a success',
@@ -93,7 +93,7 @@
                             ">
                             success
                         </button>
-                        <button class="btn btn-info" @click="
+                        <button class="uppercase btn btn-info" @click="
                             startWindToast(
                                 'Info Example!',
                                 'This is a info',
@@ -104,7 +104,7 @@
                             ">
                             info
                         </button>
-                        <button class="btn btn-error" @click="
+                        <button class="uppercase btn btn-error" @click="
                             startWindToast(
                                 'Error Example!',
                                 'This is a error',
@@ -115,7 +115,7 @@
                             ">
                             error
                         </button>
-                        <button class="btn btn-warning" @click="
+                        <button class="uppercase btn btn-warning" @click="
                             startWindToast(
                                 'Warning Example!',
                                 'This is a warning',
@@ -130,8 +130,8 @@
                 </div>
             </div>
             <div class="w-full p-10">
-                <h1 class="text-5xl font-bold p-10">Get stared</h1>
-                <p class="py-6">Installation</p>
+                <h1 class="text-5xl font-bold pb-10">Get started</h1>
+                <p class="pb-6">Installation</p>
                 <div class="mockup-code">
                     <pre data-prefix="$" class="text-warning"><code>npm i @mariojgt/wind-notify</code></pre>
                 </div>
