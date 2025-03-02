@@ -1,11 +1,11 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+import vue from "@vitejs/plugin-vue"; //add this line
 
-// https://vitejs.dev/config/
+
 export default defineConfig({
-	plugins: [
-		vue({
-			reactivityTransform: true,
-		}),
-	],
-});
+  plugins: [
+    vue(),
+    tailwindcss(),
+  ],
+})
